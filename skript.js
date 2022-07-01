@@ -1,11 +1,5 @@
-import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 import { } from "https://unpkg.com/@workadventure/scripting-api-extra@^1";
 
-bootstrapExtra().then(() => {
-    console.log('Scripting API Extra ready');
-}).catch(e => console.error(e));
-
-WA.onInit(async () => {
     var currentPopup = undefined;
     var isCoWebSiteOpened =  false;
 
@@ -20,7 +14,7 @@ WA.onInit(async () => {
     var zoneFeedback = "feedback";
     var zoneDBPlanet = "DBPlanet";
     var urlTutorial = "https://db-planet.deutschebahn.com/pages/telefonie/apps/content/workadventure-erste-schritte";
-    var urlFeedback = "https://forms.office.com/Pages/ResponsePage.aspx?id=nC2noeZJbU-a9lqvoRg7_SoZREurD2tJrJwSfyf3bX5UNEczWlNIRkJDNjNUUjZKODUyVE9aNjQ0Uy4u";
+    var urlFeedback = "https://forms.office.com/Pages/ResponsePage.aspx?id=nC2noeZJbU-a9lqvoRg7_f26WHDvlOFNi_8Y43fECOdUMDVDTUpUUDRONkxHMzdLQ09WRlQxUUZSMS4u";
     var urlDBPlanet = "https://db-planet.deutschebahn.com/pages/telefonie/apps/content/workadventure";
 
     WA.room.onEnterZone(zoneNeedHelp, () => {
@@ -95,4 +89,3 @@ WA.onInit(async () => {
             isCoWebSiteOpened = false;
         }
     })
-});
